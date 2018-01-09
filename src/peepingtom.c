@@ -28,7 +28,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <signal.h>
-#define __USE-GNU // required for registers in ucontext.h
+#define __USE_GNU // required for registers in ucontext.h
 #include <ucontext.h>
 
 #define CACHE_PROBE_STRIDE 128  // must be multiple of cache line size
