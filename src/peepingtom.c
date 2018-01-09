@@ -15,6 +15,10 @@
  *
  * Values are not stable and frequently biased toward zero. Recommend running
  * multiple times over the same address range.
+ *
+ * Compile like so:
+ *
+ *    gcc peepingtom.c -o peepingtom -std=gnu99
  */
 
 #include <stdio.h>
@@ -24,6 +28,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <signal.h>
+#define __USE-GNU // required for registers in ucontext.h
 #include <ucontext.h>
 
 #define CACHE_PROBE_STRIDE 128  // must be multiple of cache line size
